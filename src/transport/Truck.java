@@ -1,5 +1,7 @@
 package transport;
 
+import transport.driver.DriverС;
+
 public class Truck extends Transport<DriverС> {
     private LoadCapacityOfTruck loadCapacityOfTruck;
 
@@ -61,5 +63,9 @@ public class Truck extends Transport<DriverС> {
         } else {
             System.out.println("Грузоподъемность авто: " + loadCapacityOfTruck);
         }
+    }
+    @Override
+    public boolean passDiagnostics() {
+        return Math.random()>0.75;
     }
 }
