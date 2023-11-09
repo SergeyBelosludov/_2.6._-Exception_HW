@@ -9,7 +9,7 @@ public class Main {
             DriverB driverB = new DriverB("№" + i,
                     true,
                     5 + i,
-                    "");
+                    "B");
             Car car = new Car(
                     "Автомобиль " + i,
                     "№" + i,
@@ -40,7 +40,7 @@ public class Main {
                 printInfo(bus);
                 printInfo(truck);
             } catch (IllegalArgumentException e) {
-                System.out.println("Ошибка: " + e.getMessage());
+                System.out.println(" !!! Ошибка !!! : " + e.getMessage());
             }
         }
     }
@@ -55,7 +55,7 @@ public class Main {
         try {
             transport.printType();
         } catch (IllegalArgumentException e) {
-            System.out.println("Ошибка: " + e.getMessage());
+            System.out.println(" !!! Ошибка !!! : " + e.getMessage());
         }
     }
 }

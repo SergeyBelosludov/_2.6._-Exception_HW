@@ -51,10 +51,14 @@
         }
 
         public void setCategory(String category) {
-            if (category.equals("B") || category.equals("D") || category.equals("C") || category.equals("В") || category.equals("С")) {
-                this.category = category;
-            } else {
-                throw new IllegalArgumentException("Необходимо указать или исправить тип прав!");
+            try {
+                if (category.equals("B") || category.equals("D") || category.equals("C") || category.equals("В") || category.equals("С")) {
+                    this.category = category;
+                } else {
+                    throw new IllegalArgumentException("Необходимо указать или исправить тип прав у водителя " + getFullName() + "!");
+                }
+            } catch (IllegalArgumentException e) {
+                System.out.println(" !!! Ошибка !!! : " + e.getMessage());
             }
         }
     }
