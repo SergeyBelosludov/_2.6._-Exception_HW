@@ -66,6 +66,5 @@ public abstract class Transport<T extends Driver> implements Competing {
                 ", модель " + model +
                 ", объем двигателя " + engineVolume;
     }
-
     public abstract boolean passDiagnostics();
 }

@@ -56,7 +56,6 @@ public class Bus extends Transport<DriverD> {
         int bestLapTime = (int) (minTime + (maxTime - minTime) * Math.random());
         System.out.println("Лучшее время круга у автобуса = " + bestLapTime + " мин");
     }
-
     @Override
     public void maxSpeed() {
         int minSp = 40;

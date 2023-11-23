@@ -27,7 +27,6 @@ public enum BusCapacityByNumberOfSeats {
     public Integer getFrom() {
         return from;
     }
-
     public Integer getTo() {
         return to;
     }

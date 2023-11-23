@@ -25,7 +25,6 @@ public enum CarCase {
 //    public void setCarCase(String carCase) {
 //        this.carCase = carCase;
 //    }
-
     CarCase(String carCase) {
         this.carCase = carCase;
     }

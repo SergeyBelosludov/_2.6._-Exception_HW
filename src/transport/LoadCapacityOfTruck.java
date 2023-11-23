@@ -38,7 +38,6 @@ public enum LoadCapacityOfTruck {
 //    public void setFrom(Float from) {
 //        this.from = from;
 //    }
-
 //    public void setTo(Float to) {
 //        this.to = to;
 //    }

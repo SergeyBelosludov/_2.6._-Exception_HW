@@ -19,7 +19,6 @@ public class DriverD extends Driver {
     public void finishMov() {
         System.out.println("Водитель " + getFullName() + " с правами категории " + getCategory() + " закончил движение");
     }
-
     @Override
     public void refuelCar() {
         System.out.println("Водитель " + getFullName() + " с правами категории " + getCategory() + " заправил авто");
