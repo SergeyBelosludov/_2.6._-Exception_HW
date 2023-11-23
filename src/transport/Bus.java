@@ -1,5 +1,7 @@
 package transport;
 
+import transport.driver.DriverD;
+
 public class Bus extends Transport<DriverD> {
     private BusCapacityByNumberOfSeats busCapacityByNumberOfSeats;
 
@@ -62,5 +64,11 @@ public class Bus extends Transport<DriverD> {
         int maxSp = 130;
         int maxSpeed = (int) (minSp + (maxSp - minSp) * Math.random());
         System.out.println("Максимальная скорость для автобуса = " + maxSpeed + " км/ч");
+    }
+
+    @Override
+    public boolean passDiagnostics() {
+        System.out.println("Автобус " + getBrand() + " " + getModel() + " диагностику не проходит.");
+        return true;
     }
 }

@@ -1,5 +1,7 @@
 package transport;
 
+import transport.driver.Driver;
+
 public abstract class Transport<T extends Driver> implements Competing {
     private final String brand;
     private final String model;
@@ -64,4 +66,6 @@ public abstract class Transport<T extends Driver> implements Competing {
                 ", модель " + model +
                 ", объем двигателя " + engineVolume;
     }
+
+    public abstract boolean passDiagnostics();
 }

@@ -1,5 +1,7 @@
 package transport;
 
+import transport.driver.DriverС;
+
 public class Truck extends Transport<DriverС> {
     private LoadCapacityOfTruck loadCapacityOfTruck;
 
@@ -54,6 +56,7 @@ public class Truck extends Transport<DriverС> {
         int maxSpeed = (int) (minSp + (maxSp - minSp) * Math.random());
         System.out.println("Максимальная скорость для грузовика = " + maxSpeed + " км/ч");
     }
+
     @Override
     public void printType() {
         if (loadCapacityOfTruck == null) {
@@ -61,5 +64,10 @@ public class Truck extends Transport<DriverС> {
         } else {
             System.out.println("Грузоподъемность авто: " + loadCapacityOfTruck);
         }
+    }
+
+    @Override
+    public boolean passDiagnostics() {
+        return Math.random() > 0.75;
     }
 }

@@ -1,5 +1,7 @@
 package transport;
 
+import transport.driver.DriverB;
+
 public class Car extends Transport<DriverB> {
     private CarCase carCase;
 
@@ -62,5 +64,10 @@ public class Car extends Transport<DriverB> {
         int maxSp = 210;
         int maxSpeed = (int) (minSp + (maxSp - minSp) * Math.random());
         System.out.println("Максимальная скорость для автомобиля = " + maxSpeed + " км/ч");
+    }
+
+    @Override
+    public boolean passDiagnostics() {
+        return Math.random() > 0.7;
     }
 }

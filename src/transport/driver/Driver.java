@@ -1,16 +1,19 @@
-package transport;
+package transport.driver;
 
 public abstract class Driver {
     private String fullName;
     private boolean hasDriverLicense;
     private int experienceInYears;
+    private String category;
 
     public Driver(String fullName,
                   boolean hasDriverLicense,
-                  int experienceInYears) {
+                  int experienceInYears,
+                  String category) {
         this.fullName = fullName;
         this.hasDriverLicense = hasDriverLicense;
         this.experienceInYears = experienceInYears;
+        setCategory(category);
     }
 
     public abstract void startMov();
@@ -41,5 +44,21 @@ public abstract class Driver {
 
     public void setExperienceInYears(int experienceInYears) {
         this.experienceInYears = experienceInYears;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        try {
+            if (category.equals("B") || category.equals("D") || category.equals("C") || category.equals("В") || category.equals("С")) {
+                this.category = category;
+            } else {
+                throw new IllegalArgumentException("Необходимо указать или исправить тип прав у водителя " + getFullName() + "!");
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println(" !!! Ошибка !!! : " + e.getMessage());
+        }
     }
 }
