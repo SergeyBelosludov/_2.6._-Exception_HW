@@ -35,13 +35,9 @@ public class Main {
                     "№" + i,
                     4.0,
                     driverC, LoadCapacityOfTruck.N1);
-            try {
-                printInfo(car);
-                printInfo(bus);
-                printInfo(truck);
-            } catch (IllegalArgumentException e) {
-                System.out.println(" !!! Ошибка !!! : " + e.getMessage());
-            }
+            printInfo(car);
+            printInfo(bus);
+            printInfo(truck);
         }
     }
 
@@ -52,10 +48,6 @@ public class Main {
                         ", управляет автомобилем " + transport.getModel() +
                         ", будет участвовать в заезде."
         );
-        try {
-            transport.printType();
-        } catch (IllegalArgumentException e) {
-            System.out.println(" !!! Ошибка !!! : " + e.getMessage());
-        }
+        transport.printType();
     }
 }
