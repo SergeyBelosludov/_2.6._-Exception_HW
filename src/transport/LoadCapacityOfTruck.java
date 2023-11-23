@@ -21,8 +21,7 @@ public enum LoadCapacityOfTruck {
 //        } else
         if (to == null) {
             return "Грузоподъемность: от " + from + " тонн";
-        }
-        else {
+        } else {
             return "Грузоподъемность: от " + from + " тонн до " + to + " тонн";
         }
     }

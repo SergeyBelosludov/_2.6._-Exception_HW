@@ -22,7 +22,7 @@ public enum CarCase {
         return carCase;
     }
 
-//    public void setCarCase(String carCase) {
+    //    public void setCarCase(String carCase) {
 //        this.carCase = carCase;
 //    }
     CarCase(String carCase) {

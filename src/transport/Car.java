@@ -44,6 +44,7 @@ public class Car extends Transport<DriverB> {
             System.out.println("Тип кузова авто: " + carCase);
         }
     }
+
     @Override
     public void pitStop() {
         System.out.println("Пит-стоп у автомобиля");
@@ -56,6 +57,7 @@ public class Car extends Transport<DriverB> {
         int bestLapTime = (int) (minTime + (maxTime - minTime) * Math.random());
         System.out.println("Лучшее время круга у автомобиля = " + bestLapTime + " мин");
     }
+
     @Override
     public void maxSpeed() {
         int minSp = 40;
@@ -63,8 +65,9 @@ public class Car extends Transport<DriverB> {
         int maxSpeed = (int) (minSp + (maxSp - minSp) * Math.random());
         System.out.println("Максимальная скорость для автомобиля = " + maxSpeed + " км/ч");
     }
+
     @Override
     public boolean passDiagnostics() {
-        return Math.random()>0.7;
+        return Math.random() > 0.7;
     }
 }

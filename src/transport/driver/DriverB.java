@@ -9,6 +9,7 @@ public class DriverB extends Driver {
                    String category) {
         super(fullName, hasDriverLicense, experienceInYears, category);
     }
+
     @Override
     public void startMov() {
         System.out.println("Водитель " + getFullName() + " с правами категории " + getCategory() + " начал движение");

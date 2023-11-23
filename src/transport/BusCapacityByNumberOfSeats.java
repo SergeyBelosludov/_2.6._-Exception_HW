@@ -20,13 +20,14 @@ public enum BusCapacityByNumberOfSeats {
 //        if (to == null) {
 //            return "Вместимость от " + from + " мест";
 //        } else {
-            return "Вместимость " + from + " - " + to + " мест";
+        return "Вместимость " + from + " - " + to + " мест";
 //        }
     }
 
     public Integer getFrom() {
         return from;
     }
+
     public Integer getTo() {
         return to;
     }

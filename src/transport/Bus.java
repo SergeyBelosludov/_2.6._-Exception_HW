@@ -44,6 +44,7 @@ public class Bus extends Transport<DriverD> {
             System.out.println("Вместимость авто: " + busCapacityByNumberOfSeats);
         }
     }
+
     @Override
     public void pitStop() {
         System.out.println("Пит-стоп у автобуса");
@@ -56,6 +57,7 @@ public class Bus extends Transport<DriverD> {
         int bestLapTime = (int) (minTime + (maxTime - minTime) * Math.random());
         System.out.println("Лучшее время круга у автобуса = " + bestLapTime + " мин");
     }
+
     @Override
     public void maxSpeed() {
         int minSp = 40;
@@ -63,6 +65,7 @@ public class Bus extends Transport<DriverD> {
         int maxSpeed = (int) (minSp + (maxSp - minSp) * Math.random());
         System.out.println("Максимальная скорость для автобуса = " + maxSpeed + " км/ч");
     }
+
     @Override
     public boolean passDiagnostics() {
         System.out.println("Автобус " + getBrand() + " " + getModel() + " диагностику не проходит.");
